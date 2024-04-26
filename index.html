@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Postulación</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Formulario de Postulación - Chile Limpio</h1>
+  <form id="postulacionForm">
+    <label for="rut">Rut:</label>
+    <input type="text" id="rut" name="rut" required minlength="9" maxlength="10"><br>
+
+    <label for="apellidoPaterno">Apellido Paterno:</label>
+    <input type="text" id="apellidoPaterno" name="apellidoPaterno" required minlength="3" maxlength="20"><br>
+
+    <label for="apellidoMaterno">Apellido Materno:</label>
+    <input type="text" id="apellidoMaterno" name="apellidoMaterno" required minlength="3" maxlength="20"><br>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="20"><br>
+
+    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" required min="18" max="35"><br>
+
+    <label for="genero">Género:</label>
+    <select id="genero" name="genero" required>
+      <option value="">Selecciona una opción</option>
+      <option value="masculino">Masculino</option>
+      <option value="femenino">Femenino</option>
+      <option value="otro">Otro</option>
+    </select><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="celular">Celular:</label>
+    <input type="tel" id="celular" name="celular" required minlength="9" maxlength="12"><br>
+
+    <label for="profesion">Profesión:</label>
+    <input type="text" id="profesion" name="profesion" required><br>
+
+    <label for="motivacion">Motivación para postular al trabajo:</label><br>
+    <textarea id="motivacion" name="motivacion" required></textarea><br>
+
+    <button type="submit">Enviar</button>
+    <button type="button" id="crearCarta">Crear Carta</button>
+  </form>
+
+  <textarea id="carta" rows="10" cols="50" readonly></textarea>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
